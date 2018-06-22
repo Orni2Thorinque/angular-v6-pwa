@@ -1,0 +1,13 @@
+.container {
+	height: 100%;
+	width: 100%;
+	background-image: url("../../../assets/login-background.jpg");
+	background-size: cover;
+	background-repeat: none;
+}
+
+.reset-button {
+	font-size: xx-small;
+	height: 80%;
+	width: 90%;
+}
