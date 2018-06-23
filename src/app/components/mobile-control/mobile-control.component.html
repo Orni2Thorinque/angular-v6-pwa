@@ -1,0 +1,29 @@
+<div class="container" fxLayout="column" fxLayoutAlign="start stretch">
+  <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="center stretch">
+    <mat-toolbar-row>
+      <div class="ng-logo icon" (click)="drawer.toggle()">&nbsp;</div>
+      <span>Mobile Control</span>
+      <span class="spacer"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-drawer-container class="content container" autosize>
+    <mat-drawer #drawer mode="push">
+      <div class="drawer">
+        <mat-list>
+          <div *ngFor="let device of drawerList">
+            <h3 mat-subheader class="drawer-section">{{device.device}}</h3>
+            <mat-list-item *ngFor="let item of device.content">
+              <mat-icon mat-list-icon class="drawer-item-icon">{{item.icon}}</mat-icon>
+              <h4 mat-line class="drawer-item-label">{{item.label}}</h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+          </div>
+        </mat-list>
+      </div>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+      Tototo
+    </div>
+  </mat-drawer-container>
+</div>

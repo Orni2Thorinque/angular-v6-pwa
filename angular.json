@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-material-base:build"
+            "browserTarget": "angular-v6-pwa:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-material-base:build:production"
+              "browserTarget": "angular-v6-pwa:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-material-base:build"
+            "browserTarget": "angular-v6-pwa:build"
           }
         },
         "test": {
@@ -104,7 +104,7 @@
         }
       }
     },
-    "angular-material-base-e2e": {
+    "angular-v6-pwa-e2e": {
       "root": "",
       "sourceRoot": "",
       "projectType": "application",
@@ -113,7 +113,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "angular-material-base:serve"
+            "devServerTarget": "angular-v6-pwa:serve"
           }
         },
         "lint": {
@@ -130,7 +130,7 @@
       }
     }
   },
-  "defaultProject": "angular-material-base",
+  "defaultProject": "angular-v6-pwa",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

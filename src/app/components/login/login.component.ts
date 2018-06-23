@@ -11,11 +11,11 @@ import { LoginService } from './login.service';
   providers: [LoginService]
 })
 export class LoginComponent implements OnInit {
-  protected visible: boolean;
+  public visible: boolean;
 
-  protected formGrp: FormGroup;
-  protected usernameCtrl: FormControl;
-  protected passwdCtrl: FormControl;
+  public formGrp: FormGroup;
+  public usernameCtrl: FormControl;
+  public passwdCtrl: FormControl;
 
   constructor(public dialog: MatDialog, public snackBar: MatSnackBar) { }
 
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
     return snackbarConfig;
   }
 
-  protected onResetPassword(): void {
+  public onResetPassword(): void {
     this.visible = false;
 
     const dialogRef = this.dialog.open(ResetStepperComponent, {
@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  protected showSnackbar(message: string): void {
+  public showSnackbar(message: string): void {
     this.snackBar.open(message, undefined, this.snackbarconfig);
   }
 }

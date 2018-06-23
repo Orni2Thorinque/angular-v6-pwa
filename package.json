@@ -1,5 +1,5 @@
 {
-  "name": "angular-v6-playground",
+  "name": "angular-v6-pwa",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -56,6 +56,6 @@
     "protractor": "~5.3.2",
     "ts-node": "~6.0.3",
     "tslint": "~5.10.0",
-    "typescript": "^2.7.2"
+    "typescript": "2.7.2"
   }
 }

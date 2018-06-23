@@ -8,9 +8,9 @@ import { scorePassword } from '../../shared/utils/password-strength.util';
   styleUrls: ['./password-strength.component.css']
 })
 export class PasswordStrengthComponent implements OnInit {
-  protected passwordFormGroup: FormGroup;
-  protected mode: 'determinate' | 'buffer' = 'determinate';
-  protected visibility: 'visibility' | 'visibility_off' = 'visibility_off';
+  public passwordFormGroup: FormGroup;
+  public mode: 'determinate' | 'buffer' = 'determinate';
+  public visibility: 'visibility' | 'visibility_off' = 'visibility_off';
 
   get value(): number {
     let val = scorePassword(this.passwordFormGroup.get('password').value);
@@ -49,7 +49,7 @@ export class PasswordStrengthComponent implements OnInit {
     });
   }
 
-  protected focus(isFocused: boolean): void {
+  public focus(isFocused: boolean): void {
     if (isFocused) {
       this.mode = 'buffer';
     } else {
@@ -57,7 +57,7 @@ export class PasswordStrengthComponent implements OnInit {
     }
   }
 
-  protected onChangeVisibility(): void {
+  public onChangeVisibility(): void {
     this.visibility = this.visibility === 'visibility' ? 'visibility_off' : 'visibility';
   }
 }

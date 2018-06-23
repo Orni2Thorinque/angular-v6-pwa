@@ -1,9 +1,11 @@
 .container {
 	height: 100%;
 	width: 100%;
-	background-image: url("../../../assets/login-background.jpg");
+	/* background-image: url("../../../assets/login-background.jpg");
 	background-size: cover;
-	background-repeat: none;
+	background-repeat: none; */
+	color: white;
+	background-color: #FF2D2D30;
 }
 
 .reset-button {

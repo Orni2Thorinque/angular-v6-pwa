@@ -19,10 +19,10 @@ export class ResetStepperComponent implements OnInit {
     private formBuilder: FormBuilder,
     private loginService: LoginService) { }
 
-  protected userLoginFormGroup: FormGroup;
-  protected passwordFormGroup: FormGroup;
+  public userLoginFormGroup: FormGroup;
+  public passwordFormGroup: FormGroup;
 
-  protected loading: boolean;
+  public loading: boolean;
 
   static matchPassword(control: FormGroup): ValidationErrors {
     const password = control.get('password1').value; // to get value in input tag
@@ -48,7 +48,7 @@ export class ResetStepperComponent implements OnInit {
     }, ResetStepperComponent.matchPassword);
   }
 
-  private onSubmitLogin() {
+  public onSubmitLogin() {
     this.loading = true;
     if (this.userLoginFormGroup.valid) {
       this.loginService.signIn(this.userLoginFormGroup.get('email').value, this.userLoginFormGroup.get('password').value)
@@ -67,11 +67,11 @@ export class ResetStepperComponent implements OnInit {
     }
   }
 
-  protected isStepInvalid(formStep: AbstractControl): boolean {
+  public isStepInvalid(formStep: AbstractControl): boolean {
     return (formStep.invalid && formStep.errors) ? true : false;
   }
 
-  protected getStepErrors(formStep: AbstractControl): string {
+  public getStepErrors(formStep: AbstractControl): string {
     let message: string = null;
 
     if (formStep.invalid && formStep.errors) {
@@ -97,7 +97,7 @@ export class ResetStepperComponent implements OnInit {
     return message;
   }
 
-  protected onConfirmChange(): void {
+  public onConfirmChange(): void {
     this.loading = true;
 
     const userName: string = this.userLoginFormGroup.get('email').value;
