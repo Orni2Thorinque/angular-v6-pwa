@@ -1,6 +1,7 @@
 export const HOME = 'home';
 export const DASHBOARD = 'dashboard';
 export const CAMERA = 'camera';
+export const PICTURE = 'picture';
 
 export const DRAWER_DATA = [
   {
@@ -18,7 +19,7 @@ export const DRAWER_DATA = [
     content: [
       {
         label: 'Camera',
-        icon: 'photo_camera',
+        icon: 'videocam',
         active: true
 
       }, {
@@ -45,6 +46,10 @@ export const DRAWER_DATA = [
         label: 'Call',
         icon: 'call',
         active: false
+      }, {
+        label: 'Picture',
+        icon: 'camera',
+        active: true
       }, {
         label: 'Battery',
         icon: 'battery_full',

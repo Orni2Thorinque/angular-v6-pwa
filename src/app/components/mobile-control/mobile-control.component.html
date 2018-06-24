@@ -2,12 +2,12 @@
   <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="center stretch">
     <mat-toolbar-row>
       <div class="ng-logo icon" (click)="drawer.toggle()">&nbsp;</div>
-      <span>Mobile Control</span>
+      <span>Mobile Control V4</span>
       <span class="spacer"></span>
     </mat-toolbar-row>
   </mat-toolbar>
   <mat-drawer-container class="content container" autosize>
-    <mat-drawer #drawer class="drawer" mode="side">
+    <mat-drawer #drawer class="drawer" mode="cover">
       <mat-list>
         <div *ngFor="let device of drawerList">
           <h3 mat-subheader class="drawer-section">{{device.device}}</h3>

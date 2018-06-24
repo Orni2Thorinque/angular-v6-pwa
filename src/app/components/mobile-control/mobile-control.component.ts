@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material';
-import { DRAWER_DATA, HOME, CAMERA, DASHBOARD } from './mobile-control.config';
+import { DRAWER_DATA, HOME, CAMERA, DASHBOARD, PICTURE } from './mobile-control.config';
 import { Router } from '@angular/router';
 export interface MenuData {
   device: string;
@@ -29,6 +29,10 @@ export class MobileControlComponent implements OnInit {
 
       case 'Contenu':
         this.router.navigate(['/', HOME, DASHBOARD]);
+        break;
+
+      case 'Picture':
+        this.router.navigate(['/', HOME, PICTURE]);
         break;
     }
 

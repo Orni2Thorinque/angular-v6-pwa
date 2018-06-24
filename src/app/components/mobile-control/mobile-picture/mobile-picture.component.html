@@ -1,0 +1,9 @@
+<div class="container" fxLayout="column" fxLayoutAlign="space-evenly center">
+  <img class="capture-image" [src]="url" alt="">
+
+  <input class="action-capture" type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" (change)="onFileSelected($event)">
+  <label for="cameraInput" fxLayout="column" fxLayoutAlign="center center">
+    <mat-icon>camera</mat-icon>
+    <p>Take a Picture</p>
+  </label>
+</div>

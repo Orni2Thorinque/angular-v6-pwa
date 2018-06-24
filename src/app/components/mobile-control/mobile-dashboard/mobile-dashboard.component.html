@@ -1,6 +1,4 @@
 <div class="container" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="5px">
-
-  <h1> Mobile Control V2</h1>
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
     <button mat-raised-button *ngFor="let item of drawerList[1].content" class="dash-nav" [ngClass]="item.active ? 'dash-nav-active': ''"
       [disabled]="!item.active" (click)="onNavTo(item)">

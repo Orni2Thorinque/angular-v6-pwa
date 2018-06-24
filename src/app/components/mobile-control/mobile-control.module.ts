@@ -12,6 +12,7 @@ import {
     MatSidenavModule,
     MatListModule,
     MatDividerModule,
+    MatFormFieldModule,
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
@@ -20,6 +21,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './mobile-control.routing';
 import { MobileCameraComponent } from './mobile-camera/mobile-camera.component';
 import { MobileDashboardComponent } from './mobile-dashboard/mobile-dashboard.component';
+import { MobilePictureComponent } from './mobile-picture/mobile-picture.component';
 
 @NgModule({
     imports: [
@@ -33,6 +35,8 @@ import { MobileDashboardComponent } from './mobile-dashboard/mobile-dashboard.co
         MatButtonModule,
         MatCardModule,
         MatDividerModule,
+        MatFormFieldModule,
+        MatInputModule,
         MatIconModule,
         MatInputModule,
         MatListModule,
@@ -44,7 +48,8 @@ import { MobileDashboardComponent } from './mobile-dashboard/mobile-dashboard.co
     declarations: [
         MobileControlComponent,
         MobileCameraComponent,
-        MobileDashboardComponent
+        MobileDashboardComponent,
+        MobilePictureComponent
     ],
     providers: [],
 })
