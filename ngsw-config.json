@@ -17,7 +17,9 @@
     "updateMode": "prefetch",
     "resources": {
       "files": [
-        "/assets/**"
+        "/assets/**",
+        "/assets/images/**",
+        "/assets/icons/**"
       ]
     }
   }]

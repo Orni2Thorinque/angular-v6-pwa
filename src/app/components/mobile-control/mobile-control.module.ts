@@ -11,22 +11,28 @@ import {
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatDividerModule,
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { MobileControlComponent } from './mobile-control.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './mobile-control.routing';
+import { MobileCameraComponent } from './mobile-camera/mobile-camera.component';
+import { MobileDashboardComponent } from './mobile-dashboard/mobile-dashboard.component';
 
 @NgModule({
     imports: [
         BrowserAnimationsModule,
         ReactiveFormsModule,
         CommonModule,
-
+        RouterModule.forChild(routes),
         FlexLayoutModule,
 
         MatBadgeModule,
         MatButtonModule,
         MatCardModule,
+        MatDividerModule,
         MatIconModule,
         MatInputModule,
         MatListModule,
@@ -35,7 +41,11 @@ import { MobileControlComponent } from './mobile-control.component';
         MatToolbarModule
     ],
     exports: [MobileControlComponent],
-    declarations: [MobileControlComponent],
+    declarations: [
+        MobileControlComponent,
+        MobileCameraComponent,
+        MobileDashboardComponent
+    ],
     providers: [],
 })
 export class MobileControlModule { }

@@ -1,8 +1,8 @@
 {
   "name": "angular-v6-pwa",
   "short_name": "angular-v6-pwa",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#232323ed",
+  "background_color": "rgb(51, 51, 51)",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",

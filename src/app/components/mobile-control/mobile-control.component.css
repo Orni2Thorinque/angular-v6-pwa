@@ -28,9 +28,11 @@
     padding: 0;
 }
 
-.content-container {
-
+.sidenav-content {
+    height: 100%;
+    width: 100%;
 }
+.content-container { }
 
 .drawer {
     background-color: rgb(51, 51, 51);
@@ -42,12 +44,16 @@
     font-weight: bold !important;
 }
 
-.drawer-item-icon {
-    fill: red !important;
+.drawer-item {
+    cursor: pointer !important;
 }
 
 .drawer-item-label {
     color: whitesmoke !important;
     font-size: smaller !important;
     font-weight: normal !important;
+}
+
+.drawer-item-inactive {
+    text-decoration: line-through;
 }

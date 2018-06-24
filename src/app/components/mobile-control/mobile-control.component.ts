@@ -1,61 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDrawer } from '@angular/material';
+import { DRAWER_DATA, HOME, CAMERA, DASHBOARD } from './mobile-control.config';
+import { Router } from '@angular/router';
 export interface MenuData {
   device: string;
   content: { label: string, icon: string }[];
 }
-export const DRAWER_DATA = [
-  {
-    device: 'Browser',
-    content: [
-      {
-        label: 'Contenu',
-        icon: 'ballot'
-      }, {
-        label: 'Camera',
-        icon: 'photo_camera'
-
-      }, {
-        label: 'Micro',
-        icon: 'mic'
-
-      }, {
-        label: 'Stockage',
-        icon: 'storage'
-      }, {
-        label: 'Notifications',
-        icon: 'notifications'
-      }, {
-        label: 'Localisation',
-        icon: 'place'
-      }]
-  }, {
-    device: 'Mobile',
-    content: [
-      {
-        label: 'Call',
-        icon: 'call'
-      }, {
-        label: 'Battery',
-        icon: 'battery'
-      }, {
-        label: 'Contacts',
-        icon: 'contacts'
-      }, {
-        label: 'Cell Network',
-        icon: 'signal_cellular_3_bar'
-      }, {
-        label: 'Wifi Network',
-        icon: 'network_wifi'
-      }, {
-        label: 'GPS',
-        icon: 'gps_fixed'
-      }, {
-        label: 'Call',
-        icon: 'call'
-      }
-    ]
-  }
-];
 
 @Component({
   selector: 'app-mobile-control',
@@ -63,15 +13,25 @@ export const DRAWER_DATA = [
   styleUrls: ['./mobile-control.component.css']
 })
 export class MobileControlComponent implements OnInit {
+  @ViewChild(MatDrawer) sidenav: MatDrawer;
   public drawerList: MenuData[] = DRAWER_DATA;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    console.log(this.drawerList);
   }
 
-  toto(item) {
-    console.log(item);
+  public onNav(dashNav): void {
+    switch (dashNav.label) {
+      case 'Camera':
+        this.router.navigate(['/', HOME, CAMERA]);
+        break;
+
+      case 'Contenu':
+        this.router.navigate(['/', HOME, DASHBOARD]);
+        break;
+    }
+
+    this.sidenav.toggle();
   }
 }

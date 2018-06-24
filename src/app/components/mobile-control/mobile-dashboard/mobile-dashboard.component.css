@@ -1,0 +1,17 @@
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(70, 70, 70);
+}
+
+.dash-nav {
+    background-color: rgb(51, 51, 51);
+    color: whitesmoke;
+    margin-bottom: 5px;
+}
+
+.dash-nav-active {
+    background-color: rgb(51, 51, 51);
+    color: rgb(96, 162, 119);
+    margin-bottom: 5px;
+}
