@@ -24,6 +24,7 @@ import { MobileDashboardComponent } from './mobile-dashboard/mobile-dashboard.co
 import { MobilePictureComponent } from './mobile-picture/mobile-picture.component';
 import { MobileLocationComponent } from './mobile-location/mobile-location.component';
 import { AgmCoreModule } from '@agm/core';
+import { MobileCellNetworkComponent } from './mobile-cell-network/mobile-cell-network.component';
 
 @NgModule({
     imports: [
@@ -56,7 +57,8 @@ import { AgmCoreModule } from '@agm/core';
         MobileCameraComponent,
         MobileDashboardComponent,
         MobilePictureComponent,
-        MobileLocationComponent
+        MobileLocationComponent,
+        MobileCellNetworkComponent
     ],
     providers: [],
 })

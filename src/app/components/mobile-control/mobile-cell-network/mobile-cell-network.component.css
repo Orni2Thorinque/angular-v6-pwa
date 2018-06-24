@@ -1,0 +1,17 @@
+.container {
+    background-color: rgb(51, 51, 51);
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+::ng-deep .mat-input-element:disabled {
+    color: whitesmoke !important;
+}
+
+::ng-deep .mat-form-field-label {
+    color: rgb(96, 162, 119) !important;
+}
+::ng-deep .mat-form-field-underline {
+    background-color:rgb(96, 162, 119) !important;
+}

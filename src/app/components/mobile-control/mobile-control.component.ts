@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material';
-import { DRAWER_DATA, HOME, CAMERA, DASHBOARD, PICTURE, LOCATION } from './mobile-control.config';
+import { DRAWER_DATA, HOME, CAMERA, DASHBOARD, PICTURE, LOCATION, CELL_NETWORK } from './mobile-control.config';
 import { Router } from '@angular/router';
 export interface MenuData {
   device: string;
@@ -37,6 +37,10 @@ export class MobileControlComponent implements OnInit {
 
       case 'Localisation':
         this.router.navigate(['/', HOME, LOCATION]);
+        break;
+
+      case 'Cell Network':
+        this.router.navigate(['/', HOME, CELL_NETWORK]);
         break;
     }
 

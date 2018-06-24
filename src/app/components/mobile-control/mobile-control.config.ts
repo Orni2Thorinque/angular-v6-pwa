@@ -3,6 +3,7 @@ export const DASHBOARD = 'dashboard';
 export const CAMERA = 'camera';
 export const PICTURE = 'picture';
 export const LOCATION = 'location';
+export const  CELL_NETWORK = 'cell_network';
 
 export const DRAWER_DATA = [
   {
@@ -62,7 +63,7 @@ export const DRAWER_DATA = [
       }, {
         label: 'Cell Network',
         icon: 'network_cell',
-        active: false
+        active: true
       }, {
         label: 'Wifi Network',
         icon: 'network_wifi',
