@@ -22,6 +22,8 @@ import { routes } from './mobile-control.routing';
 import { MobileCameraComponent } from './mobile-camera/mobile-camera.component';
 import { MobileDashboardComponent } from './mobile-dashboard/mobile-dashboard.component';
 import { MobilePictureComponent } from './mobile-picture/mobile-picture.component';
+import { MobileLocationComponent } from './mobile-location/mobile-location.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
     imports: [
@@ -42,14 +44,19 @@ import { MobilePictureComponent } from './mobile-picture/mobile-picture.componen
         MatListModule,
         MatProgressBarModule,
         MatSidenavModule,
-        MatToolbarModule
+        MatToolbarModule,
+
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyD34RjtiTnaRqozCPxIexBMDQ60POjThV8'
+        })
     ],
     exports: [MobileControlComponent],
     declarations: [
         MobileControlComponent,
         MobileCameraComponent,
         MobileDashboardComponent,
-        MobilePictureComponent
+        MobilePictureComponent,
+        MobileLocationComponent
     ],
     providers: [],
 })

@@ -1,0 +1,9 @@
+<div class="container" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="5px" #ref>
+  <agm-map class="map" [latitude]="lat" [longitude]="lng" [style.height.px]="mapHeight" [style.width.px]="mapWidth">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+</div>
+<button mat-fab class="action-locate" (click)="locate()" class="action-locate">
+  <mat-icon>gps_fixed</mat-icon>
+  <!-- <p>Get Position</p> -->
+</button>

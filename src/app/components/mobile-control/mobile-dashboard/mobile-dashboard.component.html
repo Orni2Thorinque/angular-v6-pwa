@@ -1,17 +1,29 @@
 <div class="container" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="5px">
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
-    <button mat-raised-button *ngFor="let item of drawerList[1].content" class="dash-nav" [ngClass]="item.active ? 'dash-nav-active': ''"
-      [disabled]="!item.active" (click)="onNavTo(item)">
-      <mat-icon>{{item.icon}}</mat-icon>
-      <p>{{item.label}}</p>
-    </button>
+  <div>
+    <div fxLayout="column" fxLayoutAlign="center center" class="section-icon">
+      <mat-icon>desktop_windows</mat-icon>
+      <p class="section-title">Desktop</p>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+      <button mat-raised-button *ngFor="let item of drawerList[1].content" class="dash-nav" [ngClass]="item.active ? 'dash-nav-active': ''"
+        [disabled]="!item.active" (click)="onNavTo(item)">
+        <mat-icon>{{item.icon}}</mat-icon>
+        <p>{{item.label}}</p>
+      </button>
+    </div>
   </div>
 
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
-    <button mat-raised-button *ngFor="let item of drawerList[2].content" class="dash-nav" [ngClass]="item.active ? 'dash-nav-active': ''"
-      [disabled]="!item.active" (click)="onNavTo(item)">
-      <mat-icon>{{item.icon}}</mat-icon>
-      <p>{{item.label}}</p>
-    </button>
+  <div>
+    <div fxLayout="column" fxLayoutAlign="center center" class="section-icon">
+      <mat-icon>smartphone</mat-icon>
+      <p class="section-title">Mobile</p>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+      <button mat-raised-button *ngFor="let item of drawerList[2].content" class="dash-nav" [ngClass]="item.active ? 'dash-nav-active': ''"
+        [disabled]="!item.active" (click)="onNavTo(item)">
+        <mat-icon>{{item.icon}}</mat-icon>
+        <p>{{item.label}}</p>
+      </button>
+    </div>
   </div>
 </div>

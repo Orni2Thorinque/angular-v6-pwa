@@ -1,0 +1,19 @@
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(70, 70, 70);
+}
+
+.action-locate {
+	position:fixed;
+    bottom: 30px;
+    right: 50px;
+    background-color: rgb(51, 51, 51);
+    color: whitesmoke;
+    margin-bottom: 5px;
+}
+/* 
+agm-map {
+    height: 33%;
+    width: 100%;
+} */

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DRAWER_DATA, HOME, CAMERA, DASHBOARD, PICTURE } from '../mobile-control.config';
+import { DRAWER_DATA, HOME, CAMERA, DASHBOARD, PICTURE, LOCATION } from '../mobile-control.config';
 import { MenuData } from '../mobile-control.component';
 import { Router } from '@angular/router';
 
@@ -24,6 +24,10 @@ export class MobileDashboardComponent implements OnInit {
 
       case 'Picture':
         this.router.navigate(['/', HOME, PICTURE]);
+        break;
+
+      case 'Localisation':
+        this.router.navigate(['/', HOME, LOCATION]);
         break;
 
       default:

@@ -2,6 +2,7 @@ export const HOME = 'home';
 export const DASHBOARD = 'dashboard';
 export const CAMERA = 'camera';
 export const PICTURE = 'picture';
+export const LOCATION = 'location';
 
 export const DRAWER_DATA = [
   {
@@ -37,7 +38,7 @@ export const DRAWER_DATA = [
       }, {
         label: 'Localisation',
         icon: 'place',
-        active: false
+        active: true
       }]
   }, {
     device: 'Mobile',
